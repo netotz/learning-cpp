@@ -5,7 +5,16 @@
 using namespace std;
 
 vector<int> parseInts(string str) {
-	// Complete this function
+	stringstream ss(str);
+    vector<int> integers;
+    int number;
+    char comma;
+    while (ss >> number){
+        integers.push_back(number);
+        ss >> comma;
+    }
+
+    return integers;
 }
 
 int main() {
