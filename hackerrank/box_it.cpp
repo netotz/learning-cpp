@@ -63,7 +63,7 @@ class Box {
  * ? How this works?
  */
 std::ostream& operator<<(std::ostream& out, Box const& box) {
-    out << box.length << " " << box.breadth << " " << box.height << endl;
+    out << box.length << " " << box.breadth << " " << box.height;
     return out;
 }
 
