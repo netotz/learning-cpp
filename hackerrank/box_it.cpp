@@ -14,6 +14,14 @@ class Box {
             height = 0;
         }
 
+        /**
+         * Constructs an instance of Box with specified dimensions.
+         */
+        Box(int length, int breadth, int height) {
+            Box::length = length;
+            Box::breadth = breadth;
+            Box::height = height;
+        }
 
 };
 
