@@ -23,6 +23,15 @@ class Box {
             Box::height = height;
         }
 
+        /**
+         * Constructs an instance of a Box based on another instance.
+         */
+        Box(Box box) {
+            length = box.length;
+            breadth = box.breadth;
+            height = box.height;
+        }
+
 };
 
 void check2() {
