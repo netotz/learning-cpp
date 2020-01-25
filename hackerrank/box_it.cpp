@@ -5,7 +5,7 @@ class Box {
         int length, breadth, height;
     public:
         /**
-         * Constructs an instanfe of Box with all dimensions equal to 0.
+         * Constructs an instance of Box with all dimensions equal to 0.
          */
         Box() : length(0), breadth(0), height(0) {}
 
