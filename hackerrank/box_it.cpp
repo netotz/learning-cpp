@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-//Implement the class Box  
 class Box {
     private:
         int length, breadth, height;
@@ -26,7 +25,7 @@ class Box {
         /**
          * Constructs an instance of a Box based on another instance.
          */
-        Box(Box box) {
+        Box(Box const& box) {
             length = box.length;
             breadth = box.breadth;
             height = box.height;
@@ -54,11 +53,16 @@ class Box {
         /**
          * ? How this works?
          */
-        ostream& operator<<(ostream& out, Box const& box) {
-            out << box.length << " " << box.breadth << " " << box.height << endl;
-            return out;
-        }
+        friend std::ostream& operator<<(std::ostream& out, Box const& box);
 };
+
+/**
+ * ? How this works?
+ */
+std::ostream& operator<<(std::ostream& out, Box const& box) {
+    out << box.length << " " << box.breadth << " " << box.height << endl;
+    return out;
+}
 
 void check2() {
 	int n;
