@@ -50,6 +50,14 @@ class Box {
                 return true;
             }
         }
+
+        /**
+         * ? How this works?
+         */
+        ostream& operator<<(ostream& out, Box const& box) {
+            out << box.length << " " << box.breadth << " " << box.height << endl;
+            return out;
+        }
 };
 
 void check2() {
