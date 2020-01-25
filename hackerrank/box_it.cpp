@@ -32,6 +32,14 @@ class Box {
             height = box.height;
         }
 
+        /**
+         * Calculates de volume of the Box instance.
+         * @return volume of the box.
+         */
+        long long CalculateVolume() {
+            return length * breadth * height;
+        }
+
 };
 
 void check2() {
