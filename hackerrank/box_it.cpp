@@ -48,6 +48,9 @@ class Box {
                 (height < box.height && breadth == box.breadth && length == box.length)) {
                 return true;
             }
+            else {
+                return false;
+            }
         }
 
         /**
