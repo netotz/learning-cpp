@@ -7,29 +7,17 @@ class Box {
         /**
          * Constructs an instanfe of Box with all dimensions equal to 0.
          */
-        Box() {
-            length = 0;
-            breadth = 0;
-            height = 0;
-        }
+        Box() : length(0), breadth(0), height(0) {}
 
         /**
          * Constructs an instance of Box with specified dimensions.
          */
-        Box(int length, int breadth, int height) {
-            Box::length = length;
-            Box::breadth = breadth;
-            Box::height = height;
-        }
+        Box(int length, int breadth, int height) : length(length), breadth(breadth), height(height) {}
 
         /**
          * Constructs an instance of a Box based on another instance.
          */
-        Box(Box const& box) {
-            length = box.length;
-            breadth = box.breadth;
-            height = box.height;
-        }
+        Box(const Box& box) : length(box.length), breadth(box.breadth), height(box.height) {}
 
         /**
          * Calculates de volume of the Box instance.
