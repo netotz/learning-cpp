@@ -40,6 +40,16 @@ class Box {
             return length * breadth * height;
         }
 
+        /**
+         * Compares two Box's instances by their dimensions.
+         */
+        bool operator<(Box const& box) {
+            if (length < box.length ||
+                (breadth < box.breadth && length == box.length) ||
+                (height < box.height && breadth == box.breadth && length == box.length)) {
+                return true;
+            }
+        }
 };
 
 void check2() {
