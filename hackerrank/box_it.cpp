@@ -30,7 +30,7 @@ class Box {
         /**
          * Compares two Box's instances by their dimensions.
          */
-        bool operator<(Box const& box) {
+        bool operator<(const Box& box) {
             if (length < box.length ||
                 (breadth < box.breadth && length == box.length) ||
                 (height < box.height && breadth == box.breadth && length == box.length)) {
@@ -44,13 +44,13 @@ class Box {
         /**
          * ? How this works?
          */
-        friend std::ostream& operator<<(std::ostream& out, Box const& box);
+        friend std::ostream& operator<<(std::ostream& out, const Box& box);
 };
 
 /**
  * ? How this works?
  */
-std::ostream& operator<<(std::ostream& out, Box const& box) {
+std::ostream& operator<<(std::ostream& out, const Box& box) {
     out << box.length << " " << box.breadth << " " << box.height;
     return out;
 }
