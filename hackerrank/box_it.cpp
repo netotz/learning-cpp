@@ -36,7 +36,7 @@ class Box {
          * @return volume of the box.
          */
         long long CalculateVolume() {
-            return length * breadth * height;
+            return (long long)length * breadth * height;
         }
 
         /**
