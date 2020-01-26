@@ -23,7 +23,7 @@ class Server {
             int ans = v.at(B);
             return real + A - B * ans;
         }
-        
+
         static int getLoad() {
             return load;
         }
@@ -38,7 +38,18 @@ int main() {
 		long long A, B;
 		std::cin >> A >> B;
 
-		/* Enter your code here. */
+		try {
+            int temp = Server::compute(A, B);
+        }
+        catch (std::bad_alloc& ba) {
+            std::cout << "Not enough memory" << std::endl;
+        }
+        catch (std::exception& e) {
+            std::cout << "Exception: " << e.what() << std::endl;
+        }
+        catch (...) {
+            std::cout << "Other Exception" << std::endl;
+        }
 	}
 	std::cout << Server::getLoad() << std::endl;
 
